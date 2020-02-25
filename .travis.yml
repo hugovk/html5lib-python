@@ -36,21 +36,21 @@ deploy:
     server: https://test.pypi.org/legacy/
     on:
       tags: false
-      repo: html5lib/html5lib-python
+      repo: html5lib-python/html5lib-python
       branch: master
-      python: "3.6"
+      python: "3.8"
       condition: "$TOXENV = base"
     user: __token__
     password:
-      secure: "TODO"
+      secure: "bbdWoIryZgPlGfLhJsT2zfoVV4bjdPXICbsu8tkE4v4nG3Xr7hrLDhXK359Wkinrtx44GS4G4J5nLa3XTXgbVtR6E2WfUauWS6mg2AczGzgpYZaSBmNX+W6v97DB1vLuTmKRxuS4OSWTmI9Cjn1QKTCjG3rQ6LgjROaJEYLYP1KfZHnI2Nlzw6bRCxfHaqnmg4izsuqZsWVK2lOgw391NzP0wzqgOiaG2zxWbMdqNiEXkYk6bGr+48CGOd5cvLqrowZSSGCOQelsjmjswjl91j56NluMIf/3D1B8h172INzTCfOw067U9RKPkLNdHQC+owEett4B6iW57yUkXoxh+71cJVeXcEdLvcjktgeBLXlbjSo44ADrw8guQNIQthJUKpHOdFn9ypPXRQ2VS8LC/xX0/uvfpcPvxDhX25zVmXTimWFNFWwz3UceNyMU1EXFcIxejkMlW13CKYQfu2AyxPbvZ8IM0j8Y7T4B6vZ7CDmBoFZUW7SQYNqBua/zPxH3ThSXN7I9anhLmAt6oq4FH8osgbymrWq5BFX6fTxfpahd/xePfguK9IgBBcJTR49rlou5fhwQAiITqtGG3Q2ZhrQtkvIBjJCiZUussIJmMpHefM+xY1GwS6rAWpYI2k8hqtE3z31VLDywBProkupNscwLlDZsn1E7lynaJhFjVz0="
     distributions: sdist --format=gztar bdist_wheel
     skip_existing: true
   - provider: pypi
     on:
       tags: true
-      repo: html5lib/html5lib-python
+      repo: html5lib-python/html5lib-python
       branch: master
-      python: "3.6"
+      python: "3.8"
       condition: "$TOXENV = base"
     user: __token__
     password:
