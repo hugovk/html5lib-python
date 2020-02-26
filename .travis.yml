@@ -16,7 +16,7 @@ env:
   matrix:
     - TOXENV=optional
     - TOXENV=base
-    - TOXENV=six19-optional
+    - TOXENV=six110-optional
 
 install:
   - pip install tox codecov

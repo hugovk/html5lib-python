@@ -32,7 +32,7 @@ class Python3MarkerDict(dict):
         return self[i]
 
 
-if _markerlib and sys.version_info[0] == 3:
+if _markerlib and sys.version_info[0] >= 3:
     env = _markerlib.markers._VARS
     for key in list(env.keys()):
         new_key = key.replace('.', '_')
@@ -104,7 +104,7 @@ setup(name='html5lib',
       maintainer_email='james@hoppipolla.co.uk',
       packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
       install_requires=[
-          'six>=1.9',
+          'six>=1.10',
           'webencodings',
       ],
       python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
